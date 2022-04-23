@@ -87,6 +87,8 @@ class ServicesTable extends TableAbstract
         $query = $model->select([
             'services.id',
             'services.name',
+            'services.icon',
+            'services.order',
             'services.created_at',
             'services.status',
         ]);
@@ -110,6 +112,16 @@ class ServicesTable extends TableAbstract
                 'name'  => 'services.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
+            ],
+            'icon' => [
+                'name'  => 'services.icon',
+                'title' => trans('Icon'),
+                'class' => 'text-center',
+            ],
+            'order' => [
+                'name'  => 'services.order',
+                'title' => trans('Order'),
+                'class' => 'text-center',
             ],
             'created_at' => [
                 'name'  => 'services.created_at',

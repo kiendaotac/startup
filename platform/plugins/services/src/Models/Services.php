@@ -22,6 +22,8 @@ class Services extends BaseModel
      */
     protected $fillable = [
         'name',
+        'icon',
+        'order',
         'status',
     ];
 

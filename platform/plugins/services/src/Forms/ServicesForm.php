@@ -17,7 +17,6 @@ class ServicesForm extends FormAbstract
     public function buildForm()
     {
         $this
-            ->setModuleName(SERVICES_MODULE_SCREEN_NAME)
             ->setupModel(new Services)
             ->setValidatorClass(ServicesRequest::class)
             ->withCustomFields()
@@ -26,6 +25,18 @@ class ServicesForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label required'],
                 'attr'       => [
                     'placeholder'  => trans('core/base::forms.name_placeholder'),
+                    'data-counter' => 120,
+                ],
+            ])
+            ->add('icon', 'mediaImage', [
+                'label'      => trans('Icon'),
+                'label_attr' => ['class' => 'control-label required'],
+            ])
+            ->add('order', 'number', [
+                'label'      => trans('Order'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'placeholder'  => trans('Order'),
                     'data-counter' => 120,
                 ],
             ])
