@@ -1,0 +1,8 @@
+{
+    "name": "Start Up",
+    "namespace": "Theme\\StartUp\\",
+    "description": "TUAF StartUp - Khởi nghiệp Thái Nguyên",
+    "author": "Hoàng Kiên",
+    "version": "1.0.0",
+    "required_plugins": []
+}
