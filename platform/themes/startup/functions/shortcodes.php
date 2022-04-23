@@ -321,4 +321,14 @@ app()->booted(function () {
         return Theme::partial('components.backend.site-service', compact('attributes'));
     });
 
+    add_shortcode('site-team', __('Site team'), __('Site team'), function ($shortcode) {
+        $teams = \Botble\Team\Models\Team::where('status', BaseStatusEnum::PUBLISHED)->orderBy('order')->take($shortcode->limit)->get();
+
+        return Theme::partial('components.frontend.site-team', compact('shortcode', 'teams'));
+    });
+
+    shortcode()->setAdminConfig('site-team', function ($attributes) {
+        return Theme::partial('components.backend.site-team', compact('attributes'));
+    });
+
 });
