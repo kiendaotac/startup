@@ -365,4 +365,18 @@ app()->booted(function () {
         return Theme::partial('components.backend.site-portal', compact('attributes', 'categories'));
     });
 
+    if (is_plugin_active('contact')) {
+        add_filter(CONTACT_FORM_TEMPLATE_VIEW, function () {
+            return Theme::getThemeNamespace() . '::partials.components.backend.contact';
+        }, 120);
+    }
+
+    add_shortcode('site-contact', __('Site contact'), __('Site contact'), function ($shortcode) {
+        return Theme::partial('components.frontend.site-contact', compact('shortcode'));
+    });
+
+    shortcode()->setAdminConfig('site-contact', function ($attributes) {
+        return Theme::partial('components.backend.site-contact', compact('attributes'));
+    });
+
 });
