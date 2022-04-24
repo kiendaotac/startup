@@ -353,4 +353,16 @@ app()->booted(function () {
         return Theme::partial('components.backend.site-reviews', compact('attributes', 'categories'));
     });
 
+    add_shortcode('site-portal', __('Site portal'), __('Site portal'), function ($shortcode) {
+        $category = $shortcode->category;
+        $limit = $shortcode->limit;
+        $posts = get_posts_by_category($category, $limit, $limit);
+        return Theme::partial('components.frontend.site-portal', compact('shortcode', 'posts'));
+    });
+
+    shortcode()->setAdminConfig('site-portal', function ($attributes) {
+        $categories = get_all_categories();
+        return Theme::partial('components.backend.site-portal', compact('attributes', 'categories'));
+    });
+
 });
