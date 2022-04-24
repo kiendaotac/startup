@@ -341,4 +341,16 @@ app()->booted(function () {
         return Theme::partial('components.backend.site-product', compact('attributes'));
     });
 
+    add_shortcode('site-reviews', __('Site reviews'), __('Site reviews'), function ($shortcode) {
+        $category = $shortcode->category;
+        $limit = $shortcode->limit;
+        $posts = get_posts_by_category($category, $limit, $limit);
+        return Theme::partial('components.frontend.site-reviews', compact('shortcode', 'posts'));
+    });
+
+    shortcode()->setAdminConfig('site-reviews', function ($attributes) {
+        $categories = get_all_categories();
+        return Theme::partial('components.backend.site-reviews', compact('attributes', 'categories'));
+    });
+
 });
