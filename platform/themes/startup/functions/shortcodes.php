@@ -331,4 +331,14 @@ app()->booted(function () {
         return Theme::partial('components.backend.site-team', compact('attributes'));
     });
 
+    add_shortcode('site-product', __('Site product'), __('Site product'), function ($shortcode) {
+        $products = \Botble\Ecommerce\Models\Product::where('status', BaseStatusEnum::PUBLISHED)->take($shortcode->limit)->get();
+
+        return Theme::partial('components.frontend.site-product', compact('shortcode', 'products'));
+    });
+
+    shortcode()->setAdminConfig('site-product', function ($attributes) {
+        return Theme::partial('components.backend.site-product', compact('attributes'));
+    });
+
 });

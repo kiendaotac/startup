@@ -14,7 +14,7 @@
                         <div class="item-media">
                             <img src="{{ get_image_url($team->avatar) }}" alt="{{ $team->title }}" class="img-responsive">
                         </div>
-                        <div class="item-content">
+                        <div class="item-content" style="padding: 25px!important;">
                             <p class="small-text margin_0">{{ $team->title }}</p>
                             <p class="small-text margin_0">{{ $team->fields }}</p>
                             <h4 class="hover-color3 topmargin_0 limit-title mb-0">
