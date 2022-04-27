@@ -14,7 +14,6 @@
         "ext-zip": "*",
         "ext-gd": "*",
         "botble/menu": "*@dev",
-        "botble/optimize": "*@dev",
         "botble/page": "*@dev",
         "botble/platform": "*@dev",
         "botble/plugin-management": "*@dev",
@@ -41,10 +40,6 @@
         "nunomaduro/collision": "^5.10",
         "phpunit/phpunit": "^9.5",
         "laravel/tinker": "^2.6",
-        "botble/dev-tool": "dev-develop",
-        "botble/plugin-generator": "*@dev",
-        "botble/theme-generator": "*@dev",
-        "botble/widget-generator": "*@dev",
         "barryvdh/laravel-debugbar": "^3.6",
         "barryvdh/laravel-ide-helper": "^2.10"
     },
