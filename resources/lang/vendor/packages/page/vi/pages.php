@@ -1,22 +1,28 @@
 <?php
 
 return [
-    'create' => 'Thêm trang',
-    'edit' => 'Sửa trang',
+    'create' => 'Create new page',
+    'edit' => 'Edit page',
     'form' => [
-        'name' => 'Tiêu đề trang',
-        'note' => 'Nội dung ghi chú',
-        'name_placeholder' => 'Tên trang (tối đa 120 kí tự)',
-        'content' => 'Nội dung',
+        'name' => 'Name',
+        'name_placeholder' => 'Page\'s name (Maximum 120 characters)',
+        'content' => 'Content',
+        'note' => 'Note content',
     ],
     'notices' => [
-        'no_select' => 'Chọn ít nhất 1 trang để thực hiện hành động này!',
-        'update_success_message' => 'Cập nhật thành công',
+        'no_select' => 'Please select at least one record to take this action!',
+        'update_success_message' => 'Update successfully',
     ],
-    'deleted' => 'Xóa trang thành công',
-    'cannot_delete' => 'Không thể xóa trang',
-    'menu' => 'Trang',
-    'menu_name' => 'Trang',
-    'edit_this_page' => 'Sửa trang này',
-    'pages' => 'Trang',
+    'cannot_delete' => 'Page could not be deleted',
+    'deleted' => 'Page deleted',
+    'pages' => 'Pages',
+    'menu' => 'Pages',
+    'menu_name' => 'Pages',
+    'edit_this_page' => 'Edit this page',
+    'total_pages' => 'Total pages',
+    'settings' => [
+        'show_on_front' => 'Your homepage displays',
+        'select' => '— Select —',
+    ],
+    'front_page' => 'Front Page',
 ];

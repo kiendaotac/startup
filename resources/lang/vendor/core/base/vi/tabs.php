@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'detail' => 'Chi tiết',
-    'file' => 'Tập tin',
-    'record_note' => 'Ghi chú',
-    'revision' => 'Lịch sử thay đổi',
+    'detail' => 'Detail',
+    'file' => 'Files',
+    'record_note' => 'Record Note',
+    'revision' => 'Revision History',
 ];

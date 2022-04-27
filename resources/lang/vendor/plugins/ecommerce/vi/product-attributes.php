@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'name' => 'Thuộc tính sản phẩm',
-    'create' => 'Tạo',
-    'edit' => 'Sửa',
+    'name' => 'Product attributes',
+    'create' => 'New product attribute',
+    'edit' => 'Edit product attribute',
     'intro' => [
-        'title' => 'Quản lý danh sách thuộc tính sản phẩm',
-        'description' => 'Các thuộc tính của sản phẩm như màu sắc, kích thước ...',
-        'button_text' => 'Tạo thuộc tính sản phẩm',
+        'title' => 'Manage product attributes',
+        'description' => 'Product attribute such as color, width, height ...',
+        'button_text' => 'Create product attribute',
     ],
 ];

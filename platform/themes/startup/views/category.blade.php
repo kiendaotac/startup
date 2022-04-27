@@ -1,7 +1,7 @@
 @php
-    Theme::layout('blog-sidebar')
+    Theme::layout('startup-blog');
 @endphp
 
 @if ($posts->count() > 0)
-    @include(Theme::getThemeNamespace() . '::views.loop', compact('posts'))
+    @include(Theme::getThemeNamespace() . '::views.blog-category-loop', compact('posts'))
 @endif

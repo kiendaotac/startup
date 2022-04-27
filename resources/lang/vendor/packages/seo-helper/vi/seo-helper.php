@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'meta_box_header' => 'Tối ưu hoá bộ máy tìm kiếm (SEO)',
-    'edit_seo_meta' => 'Chỉnh sửa SEO',
-    'default_description' => 'Thiết lập các thẻ mô tả giúp người dùng dễ dàng tìm thấy trên công cụ tìm kiếm như Google.',
-    'seo_title' => 'Tiêu đề trang',
-    'seo_description' => 'Mô tả trang',
+    'meta_box_header' => 'Search Engine Optimize',
+    'edit_seo_meta' => 'Edit SEO meta',
+    'default_description' => 'Setup meta title & description to make your site easy to discovered on search engines such as Google',
+    'seo_title' => 'SEO Title',
+    'seo_description' => 'SEO description',
 ];

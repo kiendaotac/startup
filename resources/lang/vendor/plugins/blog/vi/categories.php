@@ -1,9 +1,11 @@
 <?php
 
 return [
-    'create' => 'Thêm danh mục mới',
-    'edit' => 'Sửa danh mục',
-    'menu_name' => 'Danh mục',
-    'edit_this_category' => 'Sửa danh mục này',
-    'menu' => 'Danh mục',
+    'create' => 'Create new category',
+    'edit' => 'Edit category',
+    'menu' => 'Categories',
+    'edit_this_category' => 'Edit this category',
+    'menu_name' => 'Categories',
+    'none' => 'None',
+    'total_posts' => 'Total posts: :total',
 ];

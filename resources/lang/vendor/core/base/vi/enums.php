@@ -2,7 +2,8 @@
 
 return [
     'statuses' => [
-        'draft' => 'Bản nháp',
-        'pending' => 'Đang chờ xử lý',
+        'draft' => 'Draft',
+        'pending' => 'Pending',
+        'published' => 'Published',
     ],
 ];

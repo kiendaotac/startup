@@ -1,9 +1,18 @@
 <?php
 
 return [
-    'name' => 'Địa chỉ cửa hàng',
-    'description' => 'Địa chỉ này sẽ xuất hiện trên hoá đơn của bạn và sẽ được sử dụng để tính toán mức giá vận chuyển của bạn.',
-    'shop_name' => 'Tên cửa hàng',
-    'phone' => 'Điện thoại',
-    'address' => 'Địa chỉ',
+    'name' => 'Store locators',
+    'description' => 'This address will appear on your invoice and will be used to calculate your shipping price.',
+    'shop_name' => 'Shop name',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'state' => 'State',
+    'city' => 'City',
+    'country' => 'Country',
+    'address' => 'Address',
+    'primary_store_is' => 'Primary store is',
+    'store_name' => 'Store name',
+    'select_country' => 'Select country...',
+    'default_shipping_location' => 'Default shipping location',
+    'default_store' => 'Default store',
 ];

@@ -8,6 +8,8 @@ register_page_template([
     'full-width'   => __('Full width'),
     'homepage'     => __('Homepage'),
     'coming-soon'  => __('Coming soon'),
+    'pages'        => __('Pages'),
+    'startup-blog' => __('Startup Blog')
 ]);
 
 register_sidebar([

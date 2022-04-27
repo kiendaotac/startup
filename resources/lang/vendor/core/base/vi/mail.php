@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'send-fail' => 'Gửi email không thành công',
+    'send-fail' => 'Send email failed',
 ];

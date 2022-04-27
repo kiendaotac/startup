@@ -379,4 +379,12 @@ app()->booted(function () {
         return Theme::partial('components.backend.site-contact', compact('attributes'));
     });
 
+    add_shortcode('site-docs', __('Site docs'), __('Site docs'), function ($shortcode) {
+        return Theme::partial('components.frontend.site-docs', compact('shortcode'));
+    });
+
+    shortcode()->setAdminConfig('site-docs', function ($attributes) {
+        return Theme::partial('components.backend.site-docs', compact('attributes'));
+    });
+
 });

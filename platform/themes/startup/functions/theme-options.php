@@ -464,4 +464,95 @@ app()->booted(function () {
                 ],
             ],
         ]);
+
+    // StartUp TUAF
+    theme_option()
+        ->setSection([
+            'title'      => __('TUAF StarUp'),
+            'desc'       => __('Config TUAF StartUp'),
+            'id'         => 'opt-text-tuaf-config',
+            'subsection' => true,
+            'icon'       => 'fa fa-bars',
+        ])
+        ->setField([
+            'id'         => 'owner',
+            'section_id' => 'opt-text-tuaf-config',
+            'type'       => 'text',
+            'label'      => __('Cơ quan chủ quản'),
+            'attributes' => [
+                'name'    => 'owner',
+                'value'   => 'Cơ quan chủ quản: Trung tâm tư vấn, ươm tạo công nghệ và Hỗ trợ khởi nghiệp - Trường đại học Nông Lâm Thái Nguyên',
+                'options' => [
+                    'class'        => 'form-control',
+                    'placeholder'  => __('Thông tin cơ quan chủ quản'),
+                    'data-counter' => 250,
+                ],
+            ],
+            'helper'     => __('Thông tin cơ quan chủ quản'),
+        ])
+        ->setField([
+            'id'         => 'tuaf_address',
+            'section_id' => 'opt-text-tuaf-config',
+            'type'       => 'text',
+            'label'      => __('Địa chỉ'),
+            'attributes' => [
+                'name'    => 'tuaf_address',
+                'value'   => 'Thành phố Thái Nguyên',
+                'options' => [
+                    'class'        => 'form-control',
+                    'placeholder'  => __('Địa chỉ'),
+                    'data-counter' => 250,
+                ],
+            ],
+            'helper'     => __('Địa chỉ'),
+        ])
+        ->setField([
+            'id'         => 'tuaf_phone',
+            'section_id' => 'opt-text-tuaf-config',
+            'type'       => 'text',
+            'label'      => __('Điện thoại'),
+            'attributes' => [
+                'name'    => 'tuaf_phone',
+                'value'   => '0982.166.696',
+                'options' => [
+                    'class'        => 'form-control',
+                    'placeholder'  => __('Điện thoại'),
+                    'data-counter' => 250,
+                ],
+            ],
+            'helper'     => __('Điện thoại'),
+        ])
+        ->setField([
+            'id'         => 'tuaf_website',
+            'section_id' => 'opt-text-tuaf-config',
+            'type'       => 'text',
+            'label'      => __('Website'),
+            'attributes' => [
+                'name'    => 'tuaf_website',
+                'value'   => 'startup.tuaf.edu.vn',
+                'options' => [
+                    'class'        => 'form-control',
+                    'placeholder'  => __('Website'),
+                    'data-counter' => 250,
+                ],
+            ],
+            'helper'     => __('Website'),
+        ])
+        ->setField([
+            'id'         => 'tuaf_email',
+            'section_id' => 'opt-text-tuaf-config',
+            'type'       => 'text',
+            'label'      => __('Email'),
+            'attributes' => [
+                'name'    => 'tuaf_email',
+                'value'   => 'startup@tuaf.edu.vn',
+                'options' => [
+                    'class'        => 'form-control',
+                    'placeholder'  => __('Email'),
+                    'data-counter' => 250,
+                ],
+            ],
+            'helper'     => __('Email'),
+        ])
+    ;
 });

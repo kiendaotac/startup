@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'Khách hàng',
+    'name' => 'Customers',
     'create' => 'Create a customer',
     'edit' => 'Edit customer ":name"',
     'email' => 'Email',
@@ -10,8 +10,17 @@ return [
     'change_password' => 'Change password?',
     'password_confirmation' => 'Password confirmation',
     'intro' => [
-        'title' => 'Quản lý danh sách khách hàng',
-        'description' => 'Khi khách hàng đặt hàng, bạn sẽ biết được thông tin và lịch sử mua hàng của khách hàng.',
-        'button_text' => 'Tạo khách hàng',
+        'title' => 'Manage customers',
+        'description' => 'When a customer buy your product(s), you will know their order histories.',
+        'button_text' => 'Create customer',
     ],
+    'phone' => 'Phone',
+    'phone_placeholder' => 'Phone',
+    'avatar' => 'Avatar',
+    'dob' => 'Date of birth',
+    'statuses' => [
+        'activated' => 'Activated',
+        'locked' => 'Locked',
+    ],
+    'email_verified' => 'Email verified?',
 ];

@@ -9399,6 +9399,12 @@ section .intro_section .slide_description_wrapper {
 		border-radius: 0 0 5px 5px;
 	}
 
+	.sf-menu > li > .mega-menu {
+		display: block !important;
+		transition: none;
+		margin-top: 0!important;
+	}
+
 	.sf-menu ul a {
 		color: #344a5f;
 		padding-left: 30px;

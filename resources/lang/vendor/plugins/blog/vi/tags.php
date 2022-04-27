@@ -1,21 +1,21 @@
 <?php
 
 return [
-    'create' => 'Thêm thẻ mới',
-    'edit' => 'Sửa thẻ',
     'form' => [
-        'name' => 'Tên',
-        'name_placeholder' => 'Tên thẻ (Tối đa 120 kí tự)',
-        'description' => 'Mô tả',
-        'description_placeholder' => 'Mô tả ngắn cho tag (Tối đa 400 kí tự)',
-        'categories' => 'Chuyên mục',
+        'name' => 'Name',
+        'name_placeholder' => 'Tag\'s name (Maximum 120 characters)',
+        'description' => 'Description',
+        'description_placeholder' => 'Short description for tag (Maximum 400 characters)',
+        'categories' => 'Categories',
     ],
     'notices' => [
-        'no_select' => 'Chọn ít nhất 1 bài viết để thực hiện hành động này!',
+        'no_select' => 'Please select at least one tag to take this action!',
     ],
-    'cannot_delete' => 'Không thể xóa thẻ',
-    'deleted' => 'Xóa thẻ thành công',
-    'menu_name' => 'Thẻ',
-    'edit_this_tag' => 'Sửa thẻ này',
-    'menu' => 'Thẻ',
+    'create' => 'Create new tag',
+    'edit' => 'Edit tag',
+    'cannot_delete' => 'Tag could not be deleted',
+    'deleted' => 'Tag deleted',
+    'menu' => 'Tags',
+    'edit_this_tag' => 'Edit this tag',
+    'menu_name' => 'Tags',
 ];
