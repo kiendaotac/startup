@@ -1,0 +1,9 @@
+{
+    "name": "Team",
+    "namespace": "Botble\\Team\\",
+    "provider": "Botble\\Team\\Providers\\TeamServiceProvider",
+    "author": "Hoàng Kiên",
+    "url": "https://kiendaotac.com",
+    "version": "1.0",
+    "description": "The description for module team"
+}
