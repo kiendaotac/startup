@@ -107,6 +107,7 @@ return [
             $theme->asset()->container('footer')->usePath()->add('jquery.touchSwipe', 'assets/js/jquery.touchSwipe.min.js');
             $theme->asset()->container('footer')->usePath()->add('fixheightproductv2', 'assets/js/fixheightproductv2.js');
             $theme->asset()->container('footer')->usePath()->add('scripts', 'assets/js/scripts.js');
+            $theme->asset()->container('footer')->usePath()->add('product', 'assets/js/product.js');
 
             if (function_exists('shortcode')) {
                 $theme->composer([
