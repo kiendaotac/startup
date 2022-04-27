@@ -9404,6 +9404,7 @@ section .intro_section .slide_description_wrapper {
 		transition: none;
 		margin-top: 0!important;
 		opacity: 1 !important;
+		top: 17px!important;
 	}
 
 	.sf-menu ul a {
