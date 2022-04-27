@@ -2,12 +2,22 @@
 <header class="page_header header_white toggler_left with_top_border item_with_border">
     <div class="container">
         <div class="row">
+            <div class="header_icon_buttons col-md-12 col-sm-12 col-xs-12 text-center hidden-xs hidden-sm">
+                <div class="text-uppercase py-1" style="color: #008488; font-weight: bold; font-size: 24px; line-height: 2; transform: scale(1,1.3)">
+                    Trung tâm ươm tạo công nghệ và hỗi trợ khởi nghiệp - TUAF
+                </div>
+                <div class="text-uppercase py-1" style="color: #008488; font-size: 20px; line-height: 2; transform: scale(1,1.3)">
+                    Technology incubation and startup support center - TUAF
+                </div>
+                <div class="text-uppercase text-danger pt-1" style="color: #e6330e; font-size: 24px; font-weight: bold; line-height: 2; transform: scale(1,1.3)">
+                    Cổng thông tin kết nối hỗ trợ khởi nghiệp đổi mới sáng tạo
+                </div>
+            </div>
             <div class="header_mainmenu col-md-4 col-sm-4 col-xs-4 hidden-xs hidden-sm">
                 <!-- main nav start -->
                 <nav class="mainmenu_wrapper">
                     <ul class="mainmenu nav sf-menu">
                         <li>
-                            <a href="#"><i class="fa fa-bars"></i>MENU</a>
                             {!! Menu::renderMenuLocation('main-menu', [
                                     'view'    => 'components.main-menu',
                                     'options' => ['class' => 'mega-menu', 'a' => 'true'],
@@ -36,15 +46,7 @@
                 </span>
                 <span class="text-menu hidden-xs hidden-sm">MENU</span>
             </div>
-            <div class="header_icon_buttons col-md-4 col-sm-4 col-xs-4 text-center">
-                <div class="page_social_icons greylinks">
-                    <div class="logo-icon">
-                        <a href="/" class="logo top_logo">
-                            <img src="{{ get_image_url(theme_option('logo')) }}" alt="logo">
-                        </a>
-                    </div>
-                </div>
-            </div>
+
 {{--            <div class="header_right_buttons col-md-4 col-sm-4 col-xs-4 text-right">--}}
 {{--                <div class="page_social_icons greylinks">--}}
 {{--                    <div class="dropdown pull-right">--}}
