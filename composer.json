@@ -13,7 +13,6 @@
         "ext-json": "*",
         "ext-zip": "*",
         "ext-gd": "*",
-        "botble/api": "*@dev",
         "botble/menu": "*@dev",
         "botble/optimize": "*@dev",
         "botble/page": "*@dev",
