@@ -9305,6 +9305,7 @@ section .intro_section .slide_description_wrapper {
 		display: inline-block;
 		position: relative;
 		margin: 0 -2px;
+		vertical-align: top;
 	}
 
 	.sf-menu > li:first-child {
