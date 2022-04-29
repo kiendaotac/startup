@@ -1,7 +1,7 @@
 <!-- HEADER startup -->
 <div class="header_icon_buttons col-md-12 col-sm-12 col-xs-12 text-center hidden-xs hidden-sm">
     <div class="text-uppercase py-1" style="color: #008488; font-weight: bold; font-size: 24px; line-height: 2; transform: scale(1,1.3)">
-        Trung tâm ươm tạo công nghệ và hỗi trợ khởi nghiệp - TUAF
+        Trung tâm ươm tạo công nghệ và hỗ trợ khởi nghiệp - TUAF
     </div>
     <div class="text-uppercase py-1" style="color: #008488; font-size: 20px; line-height: 2; transform: scale(1,1.3)">
         Technology incubation and startup support center - TUAF
