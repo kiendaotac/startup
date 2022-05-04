@@ -1594,3 +1594,12 @@ svg:not(:root).svg-inline--fa {
 		top:85px;
 	}
 }
+
+/* Equal Heights for OwlCarousel 2 */
+.owl-carousel .owl-stage {
+	display: flex;
+}
+.owl-carousel .owl-item {
+	display: flex;
+	flex: 1 0 auto;
+}
