@@ -61,29 +61,19 @@
                                     </li>
                                 </ul>
                                 @if(!$product->isOutOfStock())
-                                <form id="add-item-form" action="/cart/add" method="post" class="cart variants clearfix">
-                                    <div class="select clearfix">
-                                        <select id="product-select" name="id" style="display:none">
-
-                                            <option value="1031293697">Default Title - 250,000₫</option>
-
-                                        </select>
-                                    </div>
+                                <form id="add-item-form" method="POST" action="{{ route('public.cart.add-to-cart') }}" class="cart variants clearfix">
+                                    @csrf
+                                    <input type="hidden" name="id" class="hidden-product-id" value="{{ ($product->is_variation || !$product->defaultVariation->product_id) ? $product->id : $product->defaultVariation->product_id }}"/>
                                     <label class="grey ggg" for="product_quantity">Số lượng:</label>
                                     <span class="quantity form-group">
 										<input type="button" value="-" class="minus">
-										<input type="number" step="1" min="0" name="quantity" value="1" id="quantity" class="tc item-quantity form-control ">
+										<input type="number" step="1" min="0" name="qty" value="1" id="quantity" class="tc item-quantity form-control ">
 										<input type="button" value="+" class="plus">
 									</span>
                                     <div class="row clearfix">
                                         <div class="pull-left btn-buy">
-                                            <button id="add-to-cart style-btn-buy"   class=" btn-detail btn-color-add btn-min-width btn-mgt addtocart-modal" name="add">
-                                                Thêm vào giỏ
-                                            </button>
-                                        </div>
-
                                         <div class="pull-left btn-buy">
-                                            <button id="buy-now style-btn-buy"   class=" btn-detail btn-color-buy btn-min-width btn-mgt">
+                                            <button name="checkout" type="submit" class=" btn-detail btn-color-buy btn-min-width btn-mgt">
                                                 Mua ngay
                                             </button>
                                         </div>
