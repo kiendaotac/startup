@@ -1,0 +1,9 @@
+{
+    "name": "Portal",
+    "namespace": "Botble\\Portal\\",
+    "provider": "Botble\\Portal\\Providers\\PortalServiceProvider",
+    "author": "Kiên Đạo Tặc",
+    "url": "https://kiendaotac.com",
+    "version": "1.0",
+    "description": "The description for module portal"
+}

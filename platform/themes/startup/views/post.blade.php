@@ -15,7 +15,6 @@
                             </time>
                         </span>
                     </p>
-
                 </header>
                 {!! clean($post->content) !!}
             <!-- .entry-content -->
