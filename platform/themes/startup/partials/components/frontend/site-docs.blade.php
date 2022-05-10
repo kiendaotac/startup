@@ -4,7 +4,7 @@
             <div class="bg-overlay"></div>
             <div class="col-sm-12 text-center text-white">
                 <a href="">
-                    <h2 class=" mb-0 section_header with_icon icon_color ">{{ $shortcode->title }}</h2>
+                    <h2 class=" mb-0 section_header icon_color ">{{ $shortcode->title }}</h2>
                 </a>
                 <p class="small-text text-white mb-0 col-md-10 col-md-offset-1">{{ $shortcode->subtitle }}</p>
                 <div class="text-center custom-test-tailieu col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
