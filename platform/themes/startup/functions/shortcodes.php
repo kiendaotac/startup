@@ -354,15 +354,13 @@ app()->booted(function () {
     });
 
     add_shortcode('site-portal', __('Site portal'), __('Site portal'), function ($shortcode) {
-        $category = $shortcode->category;
         $limit = $shortcode->limit;
-        $posts = get_posts_by_category($category, $limit, $limit);
+        $posts = \Botble\Portal\Models\Portal::query()->where('status', BaseStatusEnum::PUBLISHED)->latest()->get();
         return Theme::partial('components.frontend.site-portal', compact('shortcode', 'posts'));
     });
 
     shortcode()->setAdminConfig('site-portal', function ($attributes) {
-        $categories = get_all_categories();
-        return Theme::partial('components.backend.site-portal', compact('attributes', 'categories'));
+        return Theme::partial('components.backend.site-portal', compact('attributes'));
     });
 
     if (is_plugin_active('contact')) {

@@ -12,7 +12,7 @@
             <div class="col-md-3 col-lg-3 col-sm-3 pd-responsive-finance">
                 <div class="wrapper-image-taichinh">
                     <div class="bg-overlay"></div>
-                    <a href="{{ $post->url }}">
+                    <a href="{{ $post->link }}">
                         <img class="img-responsive image-finance-2"
                             src="{{ get_image_url($post->image) }}"
                             alt="{{ $post->name }}"
@@ -22,9 +22,9 @@
                     </a>
                     <div class="centered-text">
                         <div class="item-content-taichinh">
-                            <p class="small-text text-white margin_0 text-uppercase">{{ __('Cổng Thông Tin') }}</p>
+                            <p class="small-text text-white margin_0 text-uppercase">{{ $post->name }}</p>
                             <h4 class="text-white finance-text-custom-2">
-                                <a href="{{ $post->url }}" title="{{ $post->name }}">{{ $post->name }}</a>
+                                <a href="{{ $post->link }}" title="{{ $post->link }}">{{ $post->description }}</a>
                             </h4>
 {{--                            <span class="entry-date  text-white">--}}
 {{--								<time class="entry-date" datetime="{{ $post->created_at->format('d/m/Y') }}">--}}
