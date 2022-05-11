@@ -96,6 +96,7 @@ class PortalTable extends TableAbstract
             'portals.description',
             'portals.image',
             'portals.link',
+            'portals.order',
             'portals.created_at',
             'portals.status',
         ]);
