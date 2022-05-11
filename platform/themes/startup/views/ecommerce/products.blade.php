@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="columns-3">
+                <div class="columns-4">
                     <div id="products" class="products list-unstyled">
                         <div class="row">
                             @foreach($products as $product)
-                            <div class="product type-product col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                            <div class="product type-product col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <div class="vertical-item content-padding text-center with_shadow rounded">
                                     <div class="item-media with_background">
                                         <a href="{{ $product->url }}">
