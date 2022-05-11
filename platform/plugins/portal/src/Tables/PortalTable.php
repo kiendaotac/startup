@@ -135,6 +135,11 @@ class PortalTable extends TableAbstract
                 'title' => __('link'),
                 'class' => 'text-left',
             ],
+            'order' => [
+                'name'  => 'portals.order',
+                'title' => __('order'),
+                'class' => 'text-left',
+            ],
             'created_at' => [
                 'name'  => 'portals.created_at',
                 'title' => trans('core/base::tables.created_at'),

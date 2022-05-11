@@ -18,6 +18,7 @@ class PortalCreatePortalTable extends Migration
             $table->text('description');
             $table->text('image');
             $table->text('link');
+            $table->tinyInteger('order');
             $table->string('status', 60)->default('published');
             $table->timestamps();
         });

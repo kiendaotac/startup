@@ -25,6 +25,7 @@ class Portal extends BaseModel
         'description',
         'image',
         'link',
+        'order',
         'status',
     ];
 
