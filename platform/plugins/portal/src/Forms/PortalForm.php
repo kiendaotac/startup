@@ -46,6 +46,13 @@ class PortalForm extends FormAbstract
                     'placeholder'  => __('Link'),
                 ],
             ])
+            ->add('order', 'number', [
+                'label'      => __('Order'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'placeholder'  => __('Order'),
+                ],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
