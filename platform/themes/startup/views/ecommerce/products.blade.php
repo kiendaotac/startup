@@ -18,11 +18,6 @@
                                             <a href="{{ $product->url }}">{{ $product->name }}</a>
                                         </h5>
                                         <p class="price">
-                                            @if ($product->front_sale_price !== $product->price)
-                                                <del>
-                                                    <span class="amount">{{ format_price($product->price_with_taxes) }}</span>
-                                                </del>
-                                            @endif
                                             <ins>
                                                 <span class="amount">{{ format_price($product->front_sale_price_with_taxes) }}</span>
                                             </ins>
