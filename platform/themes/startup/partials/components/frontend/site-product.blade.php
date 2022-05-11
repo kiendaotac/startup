@@ -8,9 +8,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="owl-carousel owl-theme list-unstyled " data-nav="true" data-dots="false" data data-autoplay="true" data-loop="true" data-responsive-lg="3">
+{{--            <div class="owl-carousel owl-theme list-unstyled " data-nav="true" data-dots="false" data data-autoplay="true" data-loop="true" data-responsive-lg="3">--}}
                 @foreach($products as $product)
-                <li class="product type-product">
+                <div class="product type-product col-sm-3">
                     <div class="vertical-item content-padding text-center with_shadow rounded">
                         <div class="item-media with_background">
                             <a href="{{ $product->url }}">
@@ -35,9 +35,9 @@
                             </p>
                         </div>
                     </div>
-                </li>
+                </div>
                 @endforeach
-            </div>
+{{--            </div>--}}
         </div>
     </div>
 </section>
