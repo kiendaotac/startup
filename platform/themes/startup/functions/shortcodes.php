@@ -355,7 +355,7 @@ app()->booted(function () {
 
     add_shortcode('site-portal', __('Site portal'), __('Site portal'), function ($shortcode) {
         $limit = $shortcode->limit;
-        $posts = \Botble\Portal\Models\Portal::query()->where('status', BaseStatusEnum::PUBLISHED)->latest()->get();
+        $posts = \Botble\Portal\Models\Portal::query()->where('status', BaseStatusEnum::PUBLISHED)->orderBy('order')->get();
         return Theme::partial('components.frontend.site-portal', compact('shortcode', 'posts'));
     });
 

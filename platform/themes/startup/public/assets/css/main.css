@@ -9797,7 +9797,7 @@ section .intro_section .slide_description_wrapper {
 	.mainmenu_wrapper .mega-menu-col {
 		display: table-cell;
 		width: 2000px;
-		padding: 0 20px;
+		padding: 0 10px;
 		border-left: 1px solid #e5e5e5;
     /* overrides from settings / styling / mega-menu */
 	}
