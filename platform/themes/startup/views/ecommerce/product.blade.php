@@ -72,6 +72,10 @@
 									</span>
                                     <div class="row clearfix">
                                         <div class="pull-left btn-buy">
+                                            <button type="submit" class=" btn-detail btn-color-buy btn-min-width btn-mgt">
+                                                Add to cart
+                                            </button>
+                                        </div>
                                         <div class="pull-left btn-buy">
                                             <button name="checkout" type="submit" class=" btn-detail btn-color-buy btn-min-width btn-mgt">
                                                 Mua ngay
