@@ -2,6 +2,24 @@
 //Wrapping all JavaScript code into a IIFE function for prevent global variables creation
 (function(){
 
+	$(document).on('click', function (event) {
+		var _target = $(event.target).closest('.startup-dropdown'),
+			_parent = $('.startup-dropdown');
+
+		if (_target.length > 0) {
+			_parent.not(_target).removeClass('open');
+			if (
+				$(event.target).is('[data-startup="startup-dropdown"]') ||
+				$(event.target).closest('[data-startup="startup-dropdown"]').length > 0
+			) {
+				_target.toggleClass('open');
+				event.preventDefault();
+			}
+		} else {
+			$('.startup-dropdown').removeClass('open');
+		}
+	});
+
 	var $body = jQuery('body');
 	var $window = jQuery(window);
 

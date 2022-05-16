@@ -10,8 +10,10 @@ use Botble\Base\Models\BaseModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Post extends BaseModel
+class Post extends BaseModel implements Searchable
 {
     use RevisionableTrait;
     use EnumCastable;
@@ -129,5 +131,13 @@ class Post extends BaseModel
             $post->categories()->detach();
             $post->tags()->detach();
         });
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $title = $this->name;
+        $url = $this->url;
+
+        return new SearchResult($this, $title, $url);
     }
 }
