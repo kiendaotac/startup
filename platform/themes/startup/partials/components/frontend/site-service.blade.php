@@ -8,11 +8,15 @@
         <div class="row">
             @foreach($services as $service)
             <div class="col-md-3 col-sm-6">
-                <div class="arrow_box text-center with_shadow">
-                    <img class="icon-spacing" src="{{ get_image_url($service->icon) }}">
-                </div>
+                <a href="{{ $service->category->url }}">
+                    <div class="arrow_box text-center with_shadow">
+                        <img class="icon-spacing" src="{{ get_image_url($service->icon) }}">
+                    </div>
+                </a>
                 <h5 class="text-center">
-                    {{ $service->name }}
+                    <a href="{{ $service->category->url }}">
+                        {{ $service->name }}
+                    </a>
                 </h5>
             </div>
             @endforeach

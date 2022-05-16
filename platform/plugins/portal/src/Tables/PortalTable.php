@@ -69,6 +69,9 @@ class PortalTable extends TableAbstract
             ->editColumn('created_at', function ($item) {
                 return date_from_database($item->created_at, config('core.base.general.date_format.date'));
             })
+            ->addColumn('page', function ($item) {
+                return $item->page->name;
+            })
             ->editColumn('status', function ($item) {
                 return $item->status->toHtml();
             });
@@ -90,8 +93,9 @@ class PortalTable extends TableAbstract
     public function query()
     {
         $model = $this->repository->getModel();
-        $query = $model->select([
+        $query = $model->with('page')->select([
             'portals.id',
+            'portals.page_id',
             'portals.name',
             'portals.description',
             'portals.image',
@@ -115,6 +119,11 @@ class PortalTable extends TableAbstract
                 'name'  => 'portals.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
+            ],
+            'page' => [
+                'name'  => 'portals.page',
+                'title' => __('Page'),
+                'width' => '50px',
             ],
             'name' => [
                 'name'  => 'portals.name',

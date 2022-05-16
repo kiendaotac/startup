@@ -5,6 +5,7 @@ namespace Botble\Portal\Models;
 use Botble\Base\Traits\EnumCastable;
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Models\BaseModel;
+use Botble\Page\Models\Page;
 
 class Portal extends BaseModel
 {
@@ -26,6 +27,7 @@ class Portal extends BaseModel
         'image',
         'link',
         'order',
+        'page_id',
         'status',
     ];
 
@@ -35,4 +37,9 @@ class Portal extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function page()
+    {
+        return $this->belongsTo(Page::class, 'page_id', 'id');
+    }
 }

@@ -16,6 +16,7 @@ class ServicesForm extends FormAbstract
      */
     public function buildForm()
     {
+        $categoryLabel = $this->getCategoryLabel();
         $this
             ->setupModel(new Services)
             ->setValidatorClass(ServicesRequest::class)
@@ -40,6 +41,14 @@ class ServicesForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
+            ->add('category_id', 'customSelect', [
+                'label'      => __('Category'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'class' => 'form-control select-full',
+                ],
+                'choices'    => $categoryLabel,
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -49,5 +58,10 @@ class ServicesForm extends FormAbstract
                 'choices'    => BaseStatusEnum::labels(),
             ])
             ->setBreakFieldPoint('status');
+    }
+
+    private function getCategoryLabel()
+    {
+        return get_all_categories(['parent_id' => 0, 'status' => BaseStatusEnum::PUBLISHED])->sortBy('created_at')->pluck('name', 'id')->toArray();
     }
 }
