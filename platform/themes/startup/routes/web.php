@@ -55,6 +55,8 @@ Route::group(['namespace' => 'Theme\StartUp\Http\Controllers', 'middleware' => [
 
         Route::get('ajax/get-flash-sale/{id}', 'MartfuryController@ajaxGetFlashSale')
             ->name('public.ajax.get-flash-sale');
+
+        Route::get('tim-kiem', 'MartfuryController@search')->name('public.search');
     });
 });
 

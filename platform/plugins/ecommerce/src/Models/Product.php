@@ -20,8 +20,10 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Arr;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Product extends BaseModel
+class Product extends BaseModel implements Searchable
 {
     use EnumCastable;
 
@@ -763,5 +765,13 @@ class Product extends BaseModel
         }, []);
 
         return $imagesReduced;
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $title = $this->name;
+        $url = $this->url;
+
+        return new SearchResult($this, $title, $url);
     }
 }

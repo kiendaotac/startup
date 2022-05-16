@@ -4,7 +4,9 @@ namespace Theme\StartUp\Http\Controllers;
 
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Http\Responses\BaseHttpResponse;
+use Botble\Blog\Models\Post;
 use Botble\Blog\Repositories\Interfaces\PostInterface;
+use Botble\Ecommerce\Models\Product;
 use Botble\Ecommerce\Repositories\Interfaces\FlashSaleInterface;
 use Botble\Ecommerce\Repositories\Interfaces\ProductCategoryInterface;
 use Botble\Ecommerce\Repositories\Interfaces\ProductInterface;
@@ -15,6 +17,9 @@ use Cart;
 use EcommerceHelper;
 use EmailHandler;
 use Illuminate\Http\Request;
+use Spatie\Searchable\ModelSearchAspect;
+use Spatie\Searchable\Search;
+use Spatie\Searchable\SearchAspect;
 use Theme;
 use Theme\Martfury\Http\Requests\SendDownloadAppLinksRequest;
 use Theme\Martfury\Http\Resources\BrandResource;
@@ -24,6 +29,20 @@ use Theme\Martfury\Http\Resources\ReviewResource;
 
 class MartfuryController extends PublicController
 {
+    public function search(Request $request)
+    {
+        $keyword = $request->keyword;
+
+        $searchResults = (new Search())
+            ->registerModel(Product::class, function (ModelSearchAspect $modelSearchAspect){
+                $modelSearchAspect
+                    ->addSearchableAttribute('name')
+                    ->addSearchableAttribute('description');
+            })
+            ->registerModel(Post::class, ['name', 'description'])
+            ->perform($keyword);
+        return Theme::layout('pages')->scope( 'search', compact('searchResults'))->render();
+    }
     /**
      * @param Request $request
      * @param BaseHttpResponse $response

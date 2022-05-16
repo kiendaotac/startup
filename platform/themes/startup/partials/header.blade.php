@@ -76,5 +76,26 @@
 {{--            </div>--}}
         </div>
     </div>
+    <div class="header-icon">
+        <div class="header-search startup-dropdown">
+            <div class="header-search-inner" data-startup="startup-dropdown">
+                <a href="#" class="link-dropdown">
+                    <i class="far fa-search"></i>
+                </a>
+            </div>
+            <div class="block-search">
+                <form role="search" method="get" action="{{ route('public.search') }}" class="form-search">
+                    <input type="text" class="searchfield" name="keyword" value="" placeholder="Search here..">
+                    <button type="submit" class="btn-submit"><i class="far fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="header-cart">
+            <a href="{{ route('public.cart') }}">
+                <i class="far fa-shopping-bag"></i>
+                <span class="count" style="background-color: red">{{ Cart::instance('cart')->count() }}</span>
+            </a>
+        </div>
+    </div>
 </header>
 <!-- END OF HEADER -->
