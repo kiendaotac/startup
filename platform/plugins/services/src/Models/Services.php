@@ -5,6 +5,7 @@ namespace Botble\Services\Models;
 use Botble\Base\Traits\EnumCastable;
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Models\BaseModel;
+use Botble\Blog\Models\Category;
 
 class Services extends BaseModel
 {
@@ -24,6 +25,7 @@ class Services extends BaseModel
         'name',
         'icon',
         'order',
+        'category_id',
         'status',
     ];
 
@@ -33,4 +35,9 @@ class Services extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 }

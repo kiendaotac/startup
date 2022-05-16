@@ -16,6 +16,7 @@ class PortalForm extends FormAbstract
      */
     public function buildForm()
     {
+        $pageLabel = $this->getPageLabel();
         $this
             ->setupModel(new Portal)
             ->setValidatorClass(PortalRequest::class)
@@ -53,6 +54,14 @@ class PortalForm extends FormAbstract
                     'placeholder'  => __('Order'),
                 ],
             ])
+            ->add('page_id', 'customSelect', [
+                'label'      => __('Page'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'class' => 'form-control select-full',
+                ],
+                'choices'    => $pageLabel,
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -62,5 +71,10 @@ class PortalForm extends FormAbstract
                 'choices'    => BaseStatusEnum::labels(),
             ])
             ->setBreakFieldPoint('status');
+    }
+
+    private function getPageLabel()
+    {
+        return get_all_pages()->pluck('name', 'id')->toArray();
     }
 }

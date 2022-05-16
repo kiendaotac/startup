@@ -63,6 +63,9 @@ class ServicesTable extends TableAbstract
             ->editColumn('created_at', function ($item) {
                 return date_from_database($item->created_at, config('core.base.general.date_format.date'));
             })
+            ->addColumn('category', function ($item){
+                return $item->category->name;
+            })
             ->editColumn('status', function ($item) {
                 return $item->status->toHtml();
             });
@@ -84,8 +87,9 @@ class ServicesTable extends TableAbstract
     public function query()
     {
         $model = $this->repository->getModel();
-        $query = $model->select([
+        $query = $model->with('category')->select([
             'services.id',
+            'services.category_id',
             'services.name',
             'services.icon',
             'services.order',
@@ -107,6 +111,11 @@ class ServicesTable extends TableAbstract
                 'name'  => 'services.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
+            ],
+            'category' => [
+                'name'  => 'services.category',
+                'title' => __('Category'),
+                'width' => '50px',
             ],
             'name' => [
                 'name'  => 'services.name',

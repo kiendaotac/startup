@@ -2,7 +2,7 @@
     <div class="container custom-container-finance">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <a href="">
+                <a href="{{ route('public.products') }}">
                     <h2 class="mb-0 section_header icon_color3">{{ $shortcode->title }}</h2>
                 </a>
             </div>

@@ -312,7 +312,7 @@ app()->booted(function () {
     });
 
     add_shortcode('site-service', __('Site service'), __('Site service'), function ($shortcode) {
-        $services = \Botble\Services\Models\Services::where('status', BaseStatusEnum::PUBLISHED)->orderBy('order')->take($shortcode->limit)->get();
+        $services = \Botble\Services\Models\Services::where('status', BaseStatusEnum::PUBLISHED)->with('category')->orderBy('order')->take($shortcode->limit)->get();
 
         return Theme::partial('components.frontend.site-service', compact('shortcode', 'services'));
     });
@@ -355,7 +355,7 @@ app()->booted(function () {
 
     add_shortcode('site-portal', __('Site portal'), __('Site portal'), function ($shortcode) {
         $limit = $shortcode->limit;
-        $posts = \Botble\Portal\Models\Portal::query()->where('status', BaseStatusEnum::PUBLISHED)->orderBy('order')->get();
+        $posts = \Botble\Portal\Models\Portal::query()->where('status', BaseStatusEnum::PUBLISHED)->with('page')->orderBy('order')->get();
         return Theme::partial('components.frontend.site-portal', compact('shortcode', 'posts'));
     });
 

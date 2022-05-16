@@ -14,6 +14,7 @@ class PortalCreatePortalTable extends Migration
     {
         Schema::create('portals', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('page_id');
             $table->string('name', 120);
             $table->text('description');
             $table->text('image');
