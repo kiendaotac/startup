@@ -36,10 +36,14 @@ class MartfuryController extends PublicController
         $searchResults = (new Search())
             ->registerModel(Product::class, function (ModelSearchAspect $modelSearchAspect){
                 $modelSearchAspect
-                    ->addSearchableAttribute('name')
-                    ->addSearchableAttribute('description');
+                    ->addExactSearchableAttribute('name')
+                    ->addExactSearchableAttribute('description');
             })
-            ->registerModel(Post::class, ['name', 'description'])
+            ->registerModel(Post::class, function (ModelSearchAspect $modelSearchAspect){
+                $modelSearchAspect
+                    ->addExactSearchableAttribute('name')
+                    ->addExactSearchableAttribute('description');
+            })
             ->perform($keyword);
         return Theme::layout('pages')->scope( 'search', compact('searchResults'))->render();
     }
