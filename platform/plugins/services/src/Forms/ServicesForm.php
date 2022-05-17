@@ -62,6 +62,6 @@ class ServicesForm extends FormAbstract
 
     private function getCategoryLabel()
     {
-        return get_all_categories(['parent_id' => 0, 'status' => BaseStatusEnum::PUBLISHED])->sortBy('created_at')->pluck('name', 'id')->toArray();
+        return get_all_categories(['status' => BaseStatusEnum::PUBLISHED])->sortBy('created_at')->pluck('name', 'id')->toArray();
     }
 }
