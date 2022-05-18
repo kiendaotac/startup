@@ -1,9 +1,14 @@
 <section class="ls ms event news">
-{{--    @dd($posts)--}}
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2 class="mb-0 section_header">{{ $shortcode->title }}</h2>
+                @if($shortcode->link)
+                    <a href="{{ $shortcode->link }}">
+                        <h2 class="section_header">{{ $shortcode->title }}</h2>
+                    </a>
+                @else
+                    <h2 class="section_header">{{ $shortcode->title }}</h2>
+                @endif
             </div>
         </div>
         <div class="row">
