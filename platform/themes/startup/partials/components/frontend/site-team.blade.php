@@ -27,7 +27,7 @@
                                 {{ $team->name }}
                             </h4>
                             <p class="color2links">
-                                Tel: {{ $team->phone }}
+                                Tel.{{ $team->phone }}
                             </p>
                         </div>
                     </div>
