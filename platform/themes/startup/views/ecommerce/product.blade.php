@@ -73,7 +73,7 @@
                                     <div class="row clearfix">
                                         <div class="pull-left btn-buy">
                                             <button type="submit" class=" btn-detail btn-color-buy btn-min-width btn-mgt">
-                                                Add to cart
+                                                {{ __('Add To Cart') }}
                                             </button>
                                         </div>
                                         <div class="pull-left btn-buy">
