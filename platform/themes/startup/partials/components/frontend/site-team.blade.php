@@ -26,6 +26,7 @@
                             <h4 class="hover-color3 topmargin_0 limit-title mb-0">
                                 {{ $team->name }}
                             </h4>
+                            <p class="small-text margin_0" style="color: #008488">{{ $team->position }}</p>
                             <p class="color2links">
                                 Tel.{{ $team->phone }}
                             </p>

@@ -24,6 +24,7 @@ class Team extends BaseModel
         'name',
         'title',
         'fields',
+        'position',
         'avatar',
         'phone',
         'order',
