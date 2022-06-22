@@ -89,6 +89,7 @@ class TeamTable extends TableAbstract
             'teams.name',
             'teams.title',
             'teams.fields',
+            'teams.position',
             'teams.avatar',
             'teams.phone',
             'teams.order',
@@ -124,6 +125,11 @@ class TeamTable extends TableAbstract
             'fields' => [
                 'name'  => 'teams.fields',
                 'title' => trans('Fields'),
+                'class' => 'text-left',
+            ],
+            'position' => [
+                'name'  => 'teams.position',
+                'title' => trans('Chức danh'),
                 'class' => 'text-left',
             ],
             'avatar' => [

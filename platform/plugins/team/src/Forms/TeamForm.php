@@ -44,6 +44,14 @@ class TeamForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
+            ->add('position', 'text', [
+                'label'      => trans('Chức danh'),
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'placeholder'  => trans('Chức danh'),
+                    'data-counter' => 120,
+                ],
+            ])
             ->add('avatar', 'mediaImage', [
                 'label'      => trans('Avatar'),
                 'label_attr' => ['class' => 'control-label required'],

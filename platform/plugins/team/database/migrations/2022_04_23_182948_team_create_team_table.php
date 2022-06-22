@@ -17,6 +17,7 @@ class TeamCreateTeamTable extends Migration
             $table->string('name', 120);
             $table->string('title',191);
             $table->string('fields',191);
+            $table->string('position',191);
             $table->string('avatar', 191);
             $table->string('phone', 191);
             $table->tinyInteger('order')->default(1);
